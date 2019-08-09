@@ -515,7 +515,7 @@ main {
         padding-left: 10%;
         padding-right: 10%;
     }
-    .project_box, .project_header, .current_projects > .project_header {
+    .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header {
         width: 100%;
     }
 }
