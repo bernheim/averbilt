@@ -1,0 +1,716 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+    line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1em;
+}
+
+h1 {
+    font-size: 52px;
+}
+
+h2 {
+    font-size: 42px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.text_link {
+    color: inherit;
+}
+
+.text_link:hover {
+    text-decoration: none;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    list-style: none;
+  }
+  
+  
+  
+  .nav_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+  }
+  
+  
+  .solid_nav {
+    background-color: rgb(242, 244, 244);
+    transition: ease-in-out 0.4s;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px 0px;
+  }
+  
+  .menu {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+  }
+  
+
+  .menu img {
+    padding: .2em;
+    display: inline;
+    max-height: 6em;
+  }
+  
+  .menu a:hover {
+    background: rgba(150,150,150,0.5);
+  }
+  
+  .menu a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 1.5em;
+    font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+    font-size: 20px;
+    color: rgba(0, 33, 43, 0.9);
+    font-weight: 600;
+  }
+  
+  #nav_check {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 951px) {
+  .nav_btn {
+      display: none;
+  }
+  .menu {
+    padding: 0 10% 0 10%;
+  }
+  .menu_inner {
+    display: inline-block;
+  }
+  }
+  
+  
+  @media only screen and (max-width: 950px) {
+  .nav_btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: 5;
+    }
+  
+  .nav_btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+  
+  .nav_btn > label:hover {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  
+  .nav_btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #fecb00;
+    }
+  
+  .menu {
+      display: block;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      padding-top: 50px;
+      left: 0px;
+      right: 0px;
+      padding-right: 0;
+    }
+  
+
+  .menu > .nav_item > a {
+      display: block;
+      width: 100%;
+    }
+  
+  #nav_check:not(:checked) + .menu {
+      height: 0px;
+    }
+  #nav_check:checked + .menu {
+      height: 100vh;
+      overflow-y: auto;
+      background-color: rgb(242, 244, 244);
+    }
+  }
+  
+  
+
+img {
+    max-width: 100%;
+}
+
+.blue_header {
+    color: white;
+    background-color: #005293;
+    display: flex;
+    padding: 4% 10%;
+}
+
+.icon {
+    height: 100%;
+    width: 100%;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.window_icon {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.windows_icons {
+    background-color: rgba(242,244,244,0.95);
+    margin: -50px auto 0 auto;
+    padding: 3% 5%;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    color: #333;
+}
+
+.windows_icons div {
+    width: 25%;
+}
+
+.windows_icons img {
+    max-width: 80%;
+    max-height: 160px;
+    margin: auto auto 2em auto;
+    display: block;
+}
+
+.top {
+    background-image: url(/assets/media/back_view.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 10%;
+    color: rgb(102,102,102)
+}
+
+.top_content {
+    background: rgba(245,245,245,0.75);
+    padding: 2em;
+}
+
+.top_content p {
+    font-weight: 500px;
+}
+
+.content {
+    width: 80%;
+    margin: auto;
+    font-size: 23px;
+}
+
+.text {
+    color: #666;
+    padding-left: 4em;
+    padding-right: 4em;
+}
+
+.blue_headed_block {
+    padding-bottom: 3em;
+}
+
+
+.top_footer {
+    background-color: #00212b;
+    color: white;
+    padding: 50px 10%;
+    font-size: 23px;
+}
+
+.bottom_footer {
+    background-color: #666666;
+}
+
+.team_contents {
+    width: 80%;
+    margin: auto;
+}
+
+.team_member {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+}
+
+.ofir, .gary {
+    padding-bottom: 5em;
+}
+
+.ofir img {
+    padding: 5%;
+    margin: 0 0 0 auto;
+    grid-area: left;
+}
+
+.ofir .team_member div {
+    grid-area: right;
+}
+
+.gary .team_text {
+    text-align: right;
+}
+
+@media screen and (min-width: 951px) {
+.ofir .team_text {
+    text-align: left;
+}
+}
+
+.gary img {
+    padding: 5%;
+    grid-area: right;
+}
+
+.gary .team_member div {
+    grid-area: left;
+}
+
+.team_member img {
+    max-width: 170px;
+    box-sizing: content-box;
+}
+
+.team_text {
+    padding: 5%;
+}
+
+.btnEmail {
+    padding: .5em 2em;
+    margin: 0 auto;
+    border: 1px solid #00212b;
+    border-radius: 2px;
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btnEmail:hover {
+    color: white;
+    background-color: #00212b;
+}
+
+.team_contents {
+    text-align: center;
+}
+
+
+
+@media screen and (max-width: 950px) {
+
+    .blue_header {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .windows_icons div {
+        width: 100%;
+    }
+    
+    .gary .team_member {
+        grid-template-areas: "right"
+        "left";
+        grid-template-columns: 1fr;
+    }
+
+    .gary .team_text {
+        text-align: center;
+    }
+    
+    .team_member {
+        grid-template-areas: "left"
+        "right";
+        grid-template-columns: 1fr
+    }
+
+    .team_contents {
+        text-align: center;
+    }
+
+    .ofir img, .gary img {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 170px;
+    }
+    }
+
+main {
+    padding-top: 96px;
+}
+
+.philosophy_first_row {
+    display: flex;
+    padding-top: 2em;
+}
+
+.philosophy_third_row {
+    display: flex;
+}
+
+.philosophy_superficial {
+    text-align: center;
+    width: 35%;
+}
+
+.philosophy_most {
+    max-width: 65%;
+}
+
+.philosophy_air {
+    padding: 1.5em;
+}
+
+.current_projects {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    background-color: #005293;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: calc(4em + 10%);
+    padding-right: calc(4em + 10%);
+}
+
+.completed_projects {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-left: calc(4em + 10%);
+    padding-right: calc(4em + 10%);
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.current_projects > .project_header {
+    width: 30%;
+    padding: 1em;
+    color: white;
+    fill: white;
+}
+
+.completed_projects > .project_header {
+    width: 30%;
+    padding: 1em;
+}
+
+.project_box {
+    width: 60%;
+    min-height: 45vh;
+    padding: 1em;
+    color: white;
+    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+    padding-top: 20vh;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+
+
+.sutton_box {
+    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("/assets/media/North East Render.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+.tenterden_box {
+    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("/assets/media/Tenterden-front-of-house-cropped.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+.project_box h3 {
+    font-family: inherit;
+    font-weight: 700;
+}
+
+.project_box > img {
+    height: 120px;
+    width: 120px;
+}
+
+.project_box:hover {
+    text-decoration: none;
+    color: rgba(0,33,43,0.75);
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+.sutton_box:hover {
+    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("/assets/media/North East Render.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+.tenterden_box:hover {
+    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("/assets/media/Tenterden-front-of-house-cropped.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+}
+
+
+@media screen and (max-width: 950px) {
+    .projects_page {
+        padding-top: 50px;
+    }
+    .current_projects {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .completed_projects {
+        flex-direction: column-reverse;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .project_box, .project_header, .current_projects > .project_header {
+        width: 100%;
+    }
+}
+
+.project_page_header_container {
+    height: 100vh;
+    padding-top: 30%;
+    padding-bottom: 15%;
+}
+
+.tenterden_page_header {
+    background: url("/assets/media/tenterden/Front of house cropped.jpg");
+    background-attachment: fixed;
+
+}
+
+.project_page_header {
+    background-color: rgba(0,82,147,0.9);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    width: 80%;
+    margin: auto;
+    color: white;
+}
+
+.project_page_header span {
+    font-size: 23px;
+}
+
+.tenterden_counters_container {
+    width: 100%;
+    padding: 5% 15% 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: #005293;
+    text-align: center;
+}
+
+.sutton_counters_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background-color: #005293;
+    text-align: center;
+}
+
+.counter_value {
+    color: #fecb00;
+    font-size: 72px;
+    font-family: Lato, sans-serif;
+}
+
+.counter_text {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 31px;
+}
+
+
+
+.map_container {
+    padding: 20%;
+    background: url("/assets/media/bigAb.svg"), linear-gradient(#005293,#005293);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    color: black;
+    margin-bottom: -15px;
+}
+
+.map_box {
+    background-color: grey;
+    font-family: lato;
+    padding: 3em;
+}
+
+.temporary_box {
+    background-color: grey;
+    font-family: lato;
+    padding: 3em;
+}
+
+.swiper-container {
+    height: 70vh;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.floorplans_container {
+    display: flex;
+}
+
+.floorplans_box {
+    max-width: 70%;
+    background-color: #005293;
+}
+
+
+.floorplans_container .swiper-container {
+    height: 110vh;
+}
+
+.floorplans_container .swiper-slide img {
+    object-fit: contain;
+}
+
+.text_columns {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    flex-flow: row;
+}
+
+.text_columns p {
+    padding: 1em;
+}
+
+.call_to_action_container {
+    padding: 4em;
+    text-align: center;
+}
+
+.call_to_action_container p {
+    font-family: Lato, sans-serif;
+    font-size: 23px;
+    padding: .5em;
+}
+
+.contact_page {
+    width: 80%;
+    margin: auto;
+}
+
+.contact_header {
+    padding: 2em;
+}
+
+.contact_container {
+    display: flex;
+    flex-flow: row;
+    text-align: center;
+}
+
+.contact_container li {
+    text-align: left;
+}
+
+.contact_email {
+    padding: 2em;
+    max-width: 50%;
+}
+
+.contact_phone {
+    padding: 2em;
+    max-width: 50%;
+}
+
+
+
+
+
+.box_shadow {
+    box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
+}
+
+.flex_column {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 950px) {
+    .tenterden_counters_container, .sutton_counters_container, .floorplans_container {
+        flex-direction: column;
+    }
+    
+    .floorplans_box {
+        max-width: 100%;
+    }
+
+    .text_columns {
+        flex-flow: column;
+    }
+
+    .contact_container {
+        flex-flow: column;
+    }
+
+    .contact_email, .contact_phone {
+        max-width: 100%;
+    }
+    }
