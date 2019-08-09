@@ -460,7 +460,7 @@ main {
 }
 
 .tenterden_box {
-    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("{{ site.baseurl }}/assets/media/Tenterden-front-of-house-cropped.jpg");
+    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("{{ site.baseurl }}/assets/media/tenterden-front-of-house-cropped.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -505,9 +505,6 @@ main {
 
 
 @media screen and (max-width: 950px) {
-    .projects_page {
-        padding-top: 50px;
-    }
     .current_projects {
         flex-direction: column;
         padding-left: 10%;
