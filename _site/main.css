@@ -1,6 +1,3 @@
----
-
----
 * {
     box-sizing: border-box;
 }
@@ -219,7 +216,7 @@ img {
 }
 
 .top {
-    background-image: url({{ site.baseurl }}/assets/media/back_view.jpg);
+    background-image: url(/assets/media/back_view.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -451,7 +448,7 @@ main {
 
 
 .sutton_box {
-    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("{{ site.baseurl }}/assets/media/North East Render.png");
+    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("/assets/media/North East Render.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -460,7 +457,7 @@ main {
 }
 
 .tenterden_box {
-    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("{{ site.baseurl }}/assets/media/tenterden-front-of-house-cropped.jpg");
+    background: linear-gradient(rgba(57,48,74,0.66), rgba(57,48,74,.66)), url("/assets/media/tenterden-front-of-house-cropped.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -486,7 +483,7 @@ main {
 }
 
 .sutton_box:hover {
-    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("{{ site.baseurl }}/assets/media/North East Render.png");
+    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("/assets/media/North East Render.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -495,7 +492,7 @@ main {
 }
 
 .tenterden_box:hover {
-    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("{{ site.baseurl }}/assets/media/Tenterden-front-of-house-cropped.jpg");
+    background: linear-gradient(rgba(182,182,182,0.5), rgba(182,182,182,.5)), url("/assets/media/Tenterden-front-of-house-cropped.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -527,7 +524,7 @@ main {
 }
 
 .tenterden_page_header {
-    background: url("{{ site.baseurl }}/assets/media/tenterden/Front of house cropped.jpg");
+    background: url("/assets/media/tenterden/Front of house cropped.jpg");
     background-attachment: fixed;
 
 }
@@ -583,7 +580,7 @@ main {
 
 .map_container {
     padding: 20%;
-    background: url("{{ site.baseurl }}/assets/media/bigAb.svg"), linear-gradient(#005293,#005293);
+    background: url("/assets/media/bigAb.svg"), linear-gradient(#005293,#005293);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom left;
