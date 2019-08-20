@@ -77,9 +77,9 @@ ul {
 }
   
 .menu .nav_logo {
-    padding: .2em;
-    display: inline;
-    max-height: 6em;
+    padding: 1em 0 .75em 0;
+    max-height: 136px;
+    width: 300px;
 }
   
 .menu a:hover {
@@ -90,7 +90,7 @@ ul {
     text-align: center;
     text-decoration: none;
     display: block;
-    padding: 1.5em;
+    padding: 2.5em 1.5em;
     font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
     font-size: 20px;
     color: rgba(0, 33, 43, 0.9);
@@ -291,7 +291,7 @@ img {
     text-align: left;
 }
 main {
-    padding-top: 96px;
+    padding-top: 136px;
 }
 }
 
@@ -327,13 +327,9 @@ main {
     text-align: center;
 }
 
-.philosophy_first_row {
+.philosophy_first_row, .philosophy_third_row {
     display: flex;
     padding-top: 2em;
-}
-
-.philosophy_third_row {
-    display: flex;
 }
 
 .philosophy_superficial {
@@ -546,11 +542,10 @@ main {
 .text_columns {
     display: flex;
     justify-content: space-evenly;
-    padding: 1em;
     flex-flow: row;
 }
 
-.text_columns p {
+.text_columns, .text_columns p {
     padding: 1em;
 }
 

@@ -58,10 +58,10 @@ ul {
   list-style: none;
   justify-content: space-between; }
 
-.menu img {
-  padding: .2em;
-  display: inline;
-  max-height: 6em; }
+.menu .nav_logo {
+  padding: 1em 0 .75em 0;
+  max-height: 136px;
+  width: 300px; }
 
 .menu a:hover {
   background: rgba(150, 150, 150, 0.5); }
@@ -70,7 +70,7 @@ ul {
   text-align: center;
   text-decoration: none;
   display: block;
-  padding: 1.5em;
+  padding: 2.5em 1.5em;
   font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
   font-size: 20px;
   color: rgba(0, 33, 43, 0.9);
@@ -235,7 +235,7 @@ img {
     text-align: left; }
 
   main {
-    padding-top: 96px; } }
+    padding-top: 136px; } }
 .gary .team_member div {
   grid-area: left; }
 
@@ -262,12 +262,9 @@ img {
 .team_contents {
   text-align: center; }
 
-.philosophy_first_row {
+.philosophy_first_row, .philosophy_third_row {
   display: flex;
   padding-top: 2em; }
-
-.philosophy_third_row {
-  display: flex; }
 
 .philosophy_superficial {
   text-align: center;
@@ -363,10 +360,7 @@ img {
 
 .project_page_header {
   background-color: rgba(0, 82, 147, 0.9);
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding: 2em 5%;
   width: 80%;
   margin: auto;
   color: rgba(255, 255, 255, 0.9); }
@@ -447,10 +441,9 @@ img {
 .text_columns {
   display: flex;
   justify-content: space-evenly;
-  padding: 1em;
   flex-flow: row; }
 
-.text_columns p {
+.text_columns, .text_columns p {
   padding: 1em; }
 
 .call_to_action_container {
@@ -495,25 +488,16 @@ img {
   main {
     padding-top: 50px; }
 
-  .tenterden_counters_container, .sutton_counters_container, .floorplans_container {
+  .tenterden_counters_container, .sutton_counters_container, .floorplans_container, .text_columns, .contact_container, .philosophy_first_row, .philosophy_third_row {
     flex-direction: column; }
 
   .mobile_width_100 {
     max-width: 100%;
     width: 100%; }
 
-  .text_columns {
-    flex-flow: column; }
-
-  .contact_container {
-    flex-flow: column; }
-
   .text {
     padding-left: 1em;
     padding-right: 1em; }
-
-  .philosophy_first_row, .philosophy_third_row {
-    flex-flow: column; }
 
   .content, .text, .contact_container li, .gary .team_text, .team_contents {
     text-align: center; }
@@ -528,16 +512,13 @@ img {
     padding-left: 10%;
     padding-right: 10%; }
 
-  .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header {
+  .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header, .windows_icons div {
     width: 100%; }
 
   .blue_header {
     flex-flow: column;
     justify-content: center;
     align-items: center; }
-
-  .windows_icons div {
-    width: 100%; }
 
   .gary .team_member {
     grid-template-areas: "right" "left";
