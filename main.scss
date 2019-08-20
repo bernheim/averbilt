@@ -436,11 +436,6 @@ main {
     -webkit-transition: all .2s ease-in;
 }
 
-
-@media screen and (max-width: 950px) {
-    
-}
-
 .project_page_header_container {
     height: 100vh;
     padding-top: 30%;
@@ -450,15 +445,11 @@ main {
 .tenterden_page_header {
     background: url("{{ site.baseurl }}/assets/media/tenterden/Front of house cropped.jpg");
     background-attachment: fixed;
-
 }
 
 .project_page_header {
     background-color: rgba(0,82,147,0.9);
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding: 2em 5%;
     width: 80%;
     margin: auto;
     color: $color-off-white;
@@ -616,7 +607,7 @@ main {
         padding-top: 50px;
     }
     
-    .tenterden_counters_container, .sutton_counters_container, .floorplans_container {
+    .tenterden_counters_container, .sutton_counters_container, .floorplans_container, .text_columns, .contact_container, .philosophy_first_row, .philosophy_third_row {
         flex-direction: column;
     }
     
@@ -624,22 +615,10 @@ main {
         max-width: 100%;
         width: 100%;
     }
-    
-    .text_columns {
-        flex-flow: column;
-    }
-
-    .contact_container {
-        flex-flow: column;
-    }
 
     .text {
         padding-left: 1em;
         padding-right: 1em;
-    }
-
-    .philosophy_first_row, .philosophy_third_row {
-        flex-flow: column;
     }
 
     .content, .text, .contact_container li, .gary .team_text, .team_contents {
@@ -656,7 +635,7 @@ main {
         padding-left: 10%;
         padding-right: 10%;
     }
-    .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header {
+    .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header,  .windows_icons div {
         width: 100%;
     }
 
@@ -664,10 +643,6 @@ main {
         flex-flow: column;
         justify-content: center;
         align-items: center;
-    }
-    
-    .windows_icons div {
-        width: 100%;
     }
     
     .gary .team_member {
