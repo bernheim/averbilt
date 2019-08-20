@@ -1,6 +1,8 @@
 ---
 
 ---
+$color-off-white: rgba(255,255,255, 0.9);
+
 * {
     box-sizing: border-box;
 }
@@ -48,47 +50,43 @@ ul {
     margin-block-start: 0;
     margin-block-end: 0;
     list-style: none;
-  }
-  
-  
-  
-  .nav_container {
+}
+
+.nav_container {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 4;
-  }
-  
-  
-  .solid_nav {
+}   
+
+.solid_nav {
     background-color: rgb(242, 244, 244);
     transition: ease-in-out 0.4s;
     z-index: 4;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px 0px;
-  }
+}
   
-  .menu {
+.menu {
     position: absolute;
     width: 100%;
     margin: auto;
     display: flex;
     list-style: none;
     justify-content: space-between;
-  }
+}
   
-
-  .menu img {
+.menu img {
     padding: .2em;
     display: inline;
     max-height: 6em;
-  }
+}
   
-  .menu a:hover {
+.menu a:hover {
     background: rgba(150,150,150,0.5);
-  }
+}
   
-  .menu a {
+.menu a {
     text-align: center;
     text-decoration: none;
     display: block;
@@ -97,13 +95,13 @@ ul {
     font-size: 20px;
     color: rgba(0, 33, 43, 0.9);
     font-weight: 600;
-  }
+}
   
-  #nav_check {
+#nav_check {
     display: none;
-  }
+}
   
-  @media only screen and (min-width: 951px) {
+@media only screen and (min-width: 951px) {
   .nav_btn {
       display: none;
   }
@@ -113,10 +111,9 @@ ul {
   .menu_inner {
     display: inline-block;
   }
-  }
+}  
   
-  
-  @media only screen and (max-width: 950px) {
+@media only screen and (max-width: 950px) {
   .nav_btn {
       display: inline-block;
       position: absolute;
@@ -168,16 +165,14 @@ ul {
       overflow-y: auto;
       background-color: rgb(242, 244, 244);
     }
-  }
-  
-  
+}
 
 img {
     max-width: 100%;
 }
 
 .blue_header {
-    color: white;
+    color: rgba(255,255,255,0.9);
     background-color: #005293;
     display: flex;
     padding: 4% 10%;
@@ -224,7 +219,7 @@ img {
     background-size: contain;
     background-position: right;
     padding: 10%;
-    color: rgb(102,102,102)
+    color: rgb(102,102,102);
 }
 
 .top_content {
@@ -252,10 +247,9 @@ img {
     padding-bottom: 3em;
 }
 
-
 .top_footer {
     background-color: #00212b;
-    color: white;
+    color: $color-off-white;
     padding: 50px 10%;
     font-size: 23px;
 }
@@ -280,12 +274,11 @@ img {
 }
 
 .ofir img {
-    padding: 5%;
     margin: 0 0 0 auto;
     grid-area: left;
 }
 
-.ofir .team_member div {
+.ofir .team_member div, .gary img {
     grid-area: right;
 }
 
@@ -297,11 +290,9 @@ img {
 .ofir .team_text {
     text-align: left;
 }
+main {
+    padding-top: 96px;
 }
-
-.gary img {
-    padding: 5%;
-    grid-area: right;
 }
 
 .gary .team_member div {
@@ -313,7 +304,7 @@ img {
     box-sizing: content-box;
 }
 
-.team_text {
+.team_text, .ofir img, .gary img {
     padding: 5%;
 }
 
@@ -328,57 +319,12 @@ img {
 }
 
 .btnEmail:hover {
-    color: white;
+    color: $color-off-white;
     background-color: #00212b;
 }
 
 .team_contents {
     text-align: center;
-}
-
-
-
-@media screen and (max-width: 950px) {
-
-    .blue_header {
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .windows_icons div {
-        width: 100%;
-    }
-    
-    .gary .team_member {
-        grid-template-areas: "right"
-        "left";
-        grid-template-columns: 1fr;
-    }
-
-    .gary .team_text {
-        text-align: center;
-    }
-    
-    .team_member {
-        grid-template-areas: "left"
-        "right";
-        grid-template-columns: 1fr
-    }
-
-    .team_contents {
-        text-align: center;
-    }
-
-    .ofir img, .gary img {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 170px;
-    }
-    }
-
-main {
-    padding-top: 96px;
 }
 
 .philosophy_first_row {
@@ -404,35 +350,22 @@ main {
 }
 
 .current_projects {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
     background-color: #005293;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    padding-left: calc(4em + 10%);
-    padding-right: calc(4em + 10%);
 }
 
-.completed_projects {
+.completed_projects, .current_projects {
     display: flex;
-    flex-direction: row;
     text-align: center;
     justify-content: space-evenly;
-    padding-left: calc(4em + 10%);
-    padding-right: calc(4em + 10%);
-    padding-top: 4em;
-    padding-bottom: 4em;
+    padding: 4em calc(4em + 10%) 4em calc(4em + 10%);
 }
 
 .current_projects > .project_header {
-    width: 30%;
-    padding: 1em;
-    color: white;
-    fill: white;
+    color: $color-off-white;
+    fill: $color-off-white;
 }
 
-.completed_projects > .project_header {
+.completed_projects > .project_header, .current_projects > .project_header {
     width: 30%;
     padding: 1em;
 }
@@ -441,7 +374,7 @@ main {
     width: 60%;
     min-height: 45vh;
     padding: 1em;
-    color: white;
+    color: $color-off-white;
     font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
     padding-top: 20vh;
     transition: all .2s ease-in;
@@ -505,19 +438,7 @@ main {
 
 
 @media screen and (max-width: 950px) {
-    .current_projects {
-        flex-direction: column;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    .completed_projects {
-        flex-direction: column-reverse;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header {
-        width: 100%;
-    }
+    
 }
 
 .project_page_header_container {
@@ -540,7 +461,7 @@ main {
     padding-bottom: 2em;
     width: 80%;
     margin: auto;
-    color: white;
+    color: $color-off-white;
 }
 
 .project_page_header span {
@@ -574,12 +495,10 @@ main {
 }
 
 .counter_text {
-    color: white;
+    color: $color-off-white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 31px;
 }
-
-
 
 .map_container {
     padding: 20%;
@@ -684,10 +603,6 @@ main {
     max-width: 50%;
 }
 
-
-
-
-
 .box_shadow {
     box-shadow: 0px 12px 18px -6px rgba(0,0,0,0.3);
 }
@@ -697,24 +612,25 @@ main {
 }
 
 @media screen and (max-width: 950px) {
+    main {
+        padding-top: 50px;
+    }
+    
     .tenterden_counters_container, .sutton_counters_container, .floorplans_container {
         flex-direction: column;
     }
     
-    .floorplans_box {
+    .mobile_width_100 {
         max-width: 100%;
+        width: 100%;
     }
-
+    
     .text_columns {
         flex-flow: column;
     }
 
     .contact_container {
         flex-flow: column;
-    }
-
-    .contact_email, .contact_phone {
-        max-width: 100%;
     }
 
     .text {
@@ -724,5 +640,51 @@ main {
 
     .philosophy_first_row, .philosophy_third_row {
         flex-flow: column;
+    }
+
+    .content, .text, .contact_container li, .gary .team_text, .team_contents {
+        text-align: center;
+    }
+
+    .current_projects {
+        flex-direction: column;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .completed_projects {
+        flex-direction: column-reverse;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .project_box, .project_header, .current_projects > .project_header, .completed_projects > .project_header {
+        width: 100%;
+    }
+
+    .blue_header {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .windows_icons div {
+        width: 100%;
+    }
+    
+    .gary .team_member {
+        grid-template-areas: "right"
+        "left";
+        grid-template-columns: 1fr;
+    }
+
+    .team_member {
+        grid-template-areas: "left"
+        "right";
+        grid-template-columns: 1fr
+    }
+
+    .ofir img, .gary img {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 170px;
     }
     }
