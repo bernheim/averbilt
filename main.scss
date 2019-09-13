@@ -699,11 +699,15 @@ img {
     }
 }
 
-.grid-container {
+.windows-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-areas: "shueco_logo shueco_logo shueco_logo shueco_text shueco_text shueco_text""shueco_quote shueco_quote shueco_quote shueco_img shueco_img shueco_img""denmark denmark german_engineering german_engineering europe europe""rationel rationel rationel rationel rationel rationel""rationel_logo rationel_logo rationel_logo rationel_text rationel_text rationel_text";
+    grid-template-areas: "shueco_logo shueco_logo shueco_logo shueco_text shueco_text shueco_text""shueco_quote shueco_quote shueco_quote shueco_img shueco_img shueco_img""denmark denmark german_engineering german_engineering europe europe""rationel_logo rationel_logo rationel_logo rationel_logo rationel_logo rationel_logo""rationel rationel rationel rationel_text rationel_text rationel_text";
+    width: 80%;
+    margin: auto;
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    padding: 2em 0;
 }
 
 .shueco_logo {
@@ -716,6 +720,8 @@ img {
 
 .shueco_quote {
     grid-area: shueco_quote;
+    border-left: 4px solid #fecb00;
+    padding-left: 1em;
 }
 
 .shueco_img {
@@ -724,10 +730,12 @@ img {
 
 .denmark {
     grid-area: denmark;
+    border: 4px solid #fecb00;
 }
 
 .europe {
     grid-area: europe;
+    border: 4px solid #fecb00;
 }
 
 .german_engineering {
@@ -740,6 +748,7 @@ img {
 
 .rationel_logo {
     grid-area: rationel_logo;
+    padding: 2em 8em;
 }
 
 .rationel_text {
