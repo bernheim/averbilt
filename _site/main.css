@@ -568,7 +568,8 @@ img {
   margin: auto;
   grid-row-gap: 2em;
   grid-column-gap: 2em;
-  padding: 2em 0; }
+  padding: 2em 0;
+  font-size: 140%; }
 
 .shueco_logo {
   grid-area: shueco_logo; }
@@ -601,6 +602,9 @@ img {
 .rationel_logo {
   grid-area: rationel_logo;
   padding: 2em 8em; }
+
+.rationel_logo p {
+  text-align: center; }
 
 .rationel_text {
   grid-area: rationel_text; }
