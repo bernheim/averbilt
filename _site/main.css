@@ -210,6 +210,9 @@ img {
   padding: 50px 10%;
   font-size: 23px; }
 
+.top_footer a {
+  color: inherit; }
+
 .bottom_footer {
   background-color: #666666; }
 
